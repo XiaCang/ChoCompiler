@@ -1,0 +1,20 @@
+var bubbleSort = function (arr) {
+    var length = len(arr);
+    for (var i = 0; i < length; i = i + 1) {
+        var swaped = false;
+        for (var j = 0; j < length - i - 1; j = j + 1) {
+            if (arr[j] > arr[j + 1]) {
+                var temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+                swaped = true;
+            }
+        }
+        if (!swaped) {
+            break;
+        }
+    }
+    return arr;
+};
+
+bubbleSort([7,5,3,6,4,1]);
